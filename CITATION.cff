@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article and this repository."
+title: "Quantifying Human Risk from H5N1 in Canada: model code"
+type: software
+version: 1.0.0
+date-released: 2026-10-22
+license: MIT
+repository-code: "https://github.com/vdalessandro-uwo/h5n1-canada-model"
+authors:
+  - family-names: "D'Alessandro"
+    given-names: "Victoria"
+    affiliation: "School of Physical Therapy, University of Western Ontario"
+  - family-names: "Bobos"
+    given-names: "Pavlos"
+    affiliation: "School of Physical Therapy, University of Western Ontario"
