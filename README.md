@@ -7,7 +7,7 @@ This repository contains the code for the multi-species SEIR(D) model with an en
 The model represents wild birds, backyard poultry, large- and small-scale commercial poultry, reassortment hosts, poultry workers and the general population, linked through an environmental reservoir. It is calibrated by Bayesian MCMC to synthetic Canada-scale weekly case targets, attributes modelled human infections to source pathways, compares five public health and social measures (PHSMs), and adds a one-year extension with restocking of depopulated commercial premises and seasonal wild-bird importation.
 
 Repository: https://github.com/vdalessandro-uwo/h5n1-canada-model  
-Archived version: https://doi.org/10.5281/zenodo.23576247
+Archived version: https://doi.org/10.5281/zenodo.23733343
 
 ## Contents
 
