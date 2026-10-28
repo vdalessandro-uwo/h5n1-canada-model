@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the article and this repository."
-title: "Quantifying Human Risk from H5N1 in Canada: model code"
+title: "Quantifying Human Risk from H5N1 in Canada: A Scenario-Based Multi-species Model — code"
 type: software
-version: 1.0.0
-date-released: 2026-10-22
+version: 1.1.0
+date-released: 2026-10-28
 license: MIT
 repository-code: "https://github.com/vdalessandro-uwo/h5n1-canada-model"
 authors:

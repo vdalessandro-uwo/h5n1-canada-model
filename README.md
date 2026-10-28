@@ -6,7 +6,8 @@ This repository contains the code for the multi-species SEIR(D) model with an en
 
 The model represents wild birds, backyard poultry, large- and small-scale commercial poultry, reassortment hosts, poultry workers and the general population, linked through an environmental reservoir. It is calibrated by Bayesian MCMC to synthetic Canada-scale weekly case targets, attributes modelled human infections to source pathways, compares five public health and social measures (PHSMs), and adds a one-year extension with restocking of depopulated commercial premises and seasonal wild-bird importation.
 
-Repository: https://github.com/vdalessandro-uwo/h5n1-canada-model
+Repository: https://github.com/vdalessandro-uwo/h5n1-canada-model  
+Archived version: https://doi.org/10.5281/zenodo.23576247
 
 ## Contents
 
@@ -14,6 +15,7 @@ Repository: https://github.com/vdalessandro-uwo/h5n1-canada-model
 |---|---|---|
 | `R/01_main_analysis.R` | Model definition, synthetic targets, MCMC calibration, posterior predictive checks, reproduction numbers, source attribution, Spearman sensitivity analysis, PHSM scenarios, deaths, one-year extension, figures | Tables 2, 4, 5, 6; Figures 2–6; Supplemental Tables 1–3; Supplemental Figure 1; Technical Appendix Figures 2–3 |
 | `R/02_sensitivity_analyses.R` | Scale of the scenario, decomposition of the one-year burden, Eq. 18 sensitivity, importation-rate sensitivity, prior sensitivity of source attribution (three re-calibrations) | Table 7; Supplemental Tables 4, 5, 6; one-year Results paragraph |
+| `R/03_recovery_experiments.R` | Simulation study: all scenario outputs at the data-generating values, recovery of the generating values (new Table 2), the beta_HH experiment, recovery experiments for four key coefficients with replicate noise seeds, and a weak-prior fit | Table 2, Figure 7, and the true-world versions of Tables 4–6 and Figures 4–6 |
 | `figures/figure1_schematic.py` | Model structure schematic | Figure 1 |
 
 ## Requirements
@@ -29,15 +31,16 @@ install.packages(c("deSolve", "dplyr", "tidyr", "tibble", "ggplot2", "purrr",
 
 ## How to run
 
-Run the two R scripts in order, in the same R session, from the repository folder:
+Run the R scripts in order, in the same R session, from the repository folder:
 
 ```r
 setwd("path/to/this/repository")
 source("R/01_main_analysis.R")        # about 1-2 hours
 source("R/02_sensitivity_analyses.R") # about 3 hours; sections can be switched off at the top
+source("R/03_recovery_experiments.R") # about 6 hours; resumes from saved fits if interrupted
 ```
 
-Script 1 writes figures and tables to the working directory. Script 2 writes to `outputs/` and summarises its results in `outputs/sensitivity_summary.txt`. On macOS and Linux the MCMC chains in script 2 run in parallel; on Windows they run one after another.
+Script 1 writes figures and tables to the working directory. Scripts 2 and 3 write to `outputs/` and `outputs/recovery/` and summarises its results in `outputs/sensitivity_summary.txt`. On macOS and Linux the MCMC chains in script 2 run in parallel; on Windows they run one after another.
 
 Figure 1 is drawn separately:
 
